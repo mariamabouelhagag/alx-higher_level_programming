@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def get_last_digit(number):
-    return abs(number) % 10
+    last_digit = abs(number) % 10
+    return last_digit if number >= 0 else -last_digit
 
 import random
 number = random.randint(-10000, 10000)
