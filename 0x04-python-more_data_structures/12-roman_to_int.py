@@ -3,7 +3,7 @@
 def roman_to_int(roman_string):
     if (not isinstance(roman_string, str) or
             roman_string is None):
-        return (0)
+        return 0
 
     roman_value = {
             "I": 1,
@@ -25,4 +25,4 @@ def roman_to_int(roman_string):
             n += roman_value[roman_string[i]] * -1
         else:
             n += roman_value[roman_string[i]]
-    return (n)
+    return n
