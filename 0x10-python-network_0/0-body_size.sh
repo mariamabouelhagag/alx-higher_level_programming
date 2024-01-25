@@ -7,7 +7,4 @@ if [ "$#" -ne 1 ]; then
 	exit 1
 
 fi
-url=$1
-
-content_length=$(curl -sI -X HEAD $url | awk '/Content-Length/{print $2}')
-echo "Body size: $content_length bytes"
+curl -s "$1" | wc -c
